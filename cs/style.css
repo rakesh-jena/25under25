@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Nagoda";
+    src: url("Nagoda.ttf");
+}
+body {
+    margin: 0;
+    font-family: 'Nagoda', Arial, Helvetica, sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+img {
+    max-width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.lp__desktop {
+    display: block;
+}
+.lp__mobile {
+    display: none;
+}
+.lp__timer {
+    right: 60px;
+    position: absolute;
+    z-index: 10;
+    top: 220px;
+}
+#timer {
+    color: white;
+    font-weight: 700;
+    font-size: 5rem;
+}
+@media (max-width: 767.98px) {
+    .lp__desktop {
+        display: none;
+    }
+    .lp__mobile {
+        display: block;
+    }
+    .lp__timer {
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: 35px;
+        margin-inline: auto;
+    }
+    #timer {
+        font-size: 3rem;
+        display: table;
+        margin-inline: auto;
+    }
+}
