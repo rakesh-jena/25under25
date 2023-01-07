@@ -18,10 +18,10 @@
         </div>
         <div class="af-content">
             <div class="row">
-                <div class="col-md-3">
-                    <img src="{{URL::asset('images/25under25/30-under-20-img.png')}}" alt="25">
+                <div class="col-md-2">
+                    <img width="150" src="{{URL::asset('images/25under25/30-under-20-img.png')}}" alt="25">
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-10">
                     <p class="desc">Disrupting an industry is not easy. Neither is making a name for yourself in a dynamic economy like India's. But achieving all that at a young age<span style="font-family:Arial !important;">—</span>under 30<span style="font-family:Arial !important;">—</span>is no mean feat. Our Class of 2022's entrepreneurs, professionals, designers, influencers, and sportspersons, represent the many Indias we live in, and epitomise that success can come from anyone<span style="font-family:Arial !important;">—</span>and anywhere<span style="font-family:Arial !important;">—</span>as long as they are empowered to shine</p>
                 </div>
             </div>
@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-8 col-12">
                     <div class="art-img">
-                        <a href="#">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
                             <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
                             <span class="art-ttl">
                                 Neetu Yadav, Kirti Jangra, 
@@ -63,7 +63,7 @@
         <div class="art-list">
             <div class="row">
                 <div class="col-md-3 col-6">
-                    <a href="#">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
                         <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
                         <span class="ttl-name">
                             Rahul Jain, 
@@ -74,8 +74,8 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-6">
-                    <a href="#">
-                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
                         <span class="ttl-name">
                             Rahul Jain, 
                             <em class="comp-name">
@@ -85,8 +85,8 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-6">
-                    <a href="#">
-                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
                         <span class="ttl-name">
                             Rahul Jain, 
                             <em class="comp-name">
@@ -96,8 +96,8 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-6">
-                    <a href="#">
-                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
                         <span class="ttl-name">
                             Rahul Jain, 
                             <em class="comp-name">
@@ -115,4 +115,5 @@
 
     </div>
 </section>
+@include('modal.profile')
 @endsection

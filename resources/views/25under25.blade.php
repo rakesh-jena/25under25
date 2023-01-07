@@ -42,10 +42,10 @@
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg bg-white navbarpadding">
             <div class="container">
-                <a class="navbar-brand nav-logo-dark" href="{{url('/')}}">
+                <a class="navbar-brand nav-logo-desktop" href="{{url('/')}}">
                     <img src="{{ URL::asset('images/25U25-B1.png') }}" alt="25 Under 25" width="150" height="40">
                 </a>
-                <a class="navbar-brand nav-logo-light" href="{{url('/')}}">
+                <a class="navbar-brand nav-logo-mobile" href="{{url('/')}}">
                     <img src="{{ URL::asset('images/25U25-B1.png') }}" alt="25 Under 25" width="150" height="40">
                 </a>
             </div>
@@ -54,7 +54,7 @@
     <!-- End Header -->
 
     <!-- Main Content Wrapper -->
-    <div id="page" class="pt-4 pb-4">
+    <div id="page">
         @yield('content')
     </div>
     <!-- End Main Content Wrapper -->
@@ -62,9 +62,9 @@
     <!-- Footer start-->
     <!-- Footer End-->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
         <i class="bi bi-arrow-up-short"></i>
-    </a>
+    </a> --}}
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
