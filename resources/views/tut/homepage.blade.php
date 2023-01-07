@@ -13,6 +13,15 @@
         <div class="banner-text">
             <img src="{{URL::asset('images/IMAGE-TEXT.png')}}" alt="text">
         </div>
+    </div>
+    <div class="mobile-banner">
+        <img src="{{URL::asset('images/25U25 HERO BG - P.png')}}" alt="banner">
+        <div class="logo-tut">
+            <img src="{{URL::asset('images/25U25-W1.png')}}" alt="logo">
+        </div>
+        <div class="banner-text">
+            <img src="{{URL::asset('images/IMAGE-TEXT.png')}}" alt="text">
+        </div>
     </div>    
 </section>
 <section class="section tut-heading">

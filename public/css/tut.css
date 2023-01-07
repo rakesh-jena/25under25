@@ -238,9 +238,36 @@ a {
     .nav-logo-mobile {
         display: none;
     }
+    .main-banner {
+        display: block;
+    }
+    .mobile-banner {
+        display: none;
+    }
 }
 @media (max-width:567.98px) {
     .nav-logo-mobile {
+        display: block;
+    }
+    .main-banner {
+        display: none;
+    }
+    .mobile-banner {
+        display: block;
+        position: relative;
+    }
+    .nav-logo-desktop {
+        display: none;
+    }
+    .logo-tut, .banner-text {
+        margin: 40px;
+    }
+    .af-title h1 {
+        font-size: 30px;
+    }
+    .af-content img {
+        width: 90px;
+        margin-inline: auto;
         display: block;
     }
 }
