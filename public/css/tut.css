@@ -160,6 +160,62 @@ a {
     text-transform: uppercase;
     width: max-content;
 }
+.leadspace {
+    background-size: cover;
+    padding: 26px 0 250px;
+    position: relative;
+    width: 100%;
+    background-image: radial-gradient(circle at 50% 50%,#737373,#000 100%);
+}
+.profile-hero-wrapper {
+    border: 1px solid;
+    border-color: lightgrey;
+    border-right: none;
+    margin-top: -150px;
+    z-index: 10;
+    position: relative;
+    margin-bottom: 40px;
+    background-color: #fff;
+}
+.ph_wrap {
+    padding: 40px;
+}
+.ph_icon-title {
+    color: #333;
+    font: 14px/22px Work Sans,sans-serif;
+    letter-spacing: .5px;
+}
+.ph_name h1 {
+    font: 600 44px/1.27 Merriweather,serif;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+.ph_organisation {
+    color: #333;
+    display: block;
+    font: 18px/24px Work Sans,sans-serif;
+    letter-spacing: -.2px;
+}
+.ph_address {
+    color: #737373;
+    font: 16px/22px Work Sans,sans-serif;
+    letter-spacing: -.2px;
+    margin: 8px 0 24px;
+}
+.profile-info .heading {
+    border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid #181716;
+    color: #333;
+    display: flex;
+    font: 600 14px/20px Work Sans,sans-serif;
+    letter-spacing: -.1px;
+    padding: 13px 0;
+    margin-bottom: 20px;
+}
+.profile-info .about p {
+    color: #333;
+    font: 18px/30px tabular-numbers,Georgia;
+}
 @media (min-width:568px) {
     .section.tut-heading {
         padding: 40px;
