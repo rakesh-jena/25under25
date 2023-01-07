@@ -76,6 +76,7 @@ a {
     display: flex;
     margin-left: auto;
     position: relative;
+    text-align: right;
 }
 .th-ttl::after {
     height: 2px;
