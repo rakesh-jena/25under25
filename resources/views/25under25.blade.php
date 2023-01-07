@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <!-- ======= Header ======= -->
+    {{-- <!-- ======= Header ======= -->
     <header id="header" class="header">
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg bg-white navbarpadding">
@@ -51,7 +51,7 @@
             </div>
         </nav>
     </header>
-    <!-- End Header -->
+    <!-- End Header --> --}}
 
     <!-- Main Content Wrapper -->
     <div id="page">
