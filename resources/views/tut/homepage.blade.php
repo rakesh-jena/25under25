@@ -5,9 +5,15 @@
 
 @section('content')
 <section class="section tut-banner">
-    <div class="">
-        <img src="{{URL::asset('images/25under25/poster_2.jpg')}}" alt="banner">
-    </div>
+    <div class="main-banner">
+        <img src="{{URL::asset('images/25U25 HERO BG - L .png')}}" alt="banner">
+        <div class="logo-tut">
+            <img src="{{URL::asset('images/25U25-W1.png')}}" alt="logo">
+        </div>
+        <div class="banner-text">
+            <img src="{{URL::asset('images/IMAGE-TEXT.png')}}" alt="text">
+        </div>
+    </div>    
 </section>
 <section class="section tut-heading">
     <div class="container">

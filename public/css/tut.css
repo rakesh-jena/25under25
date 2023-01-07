@@ -216,6 +216,21 @@ a {
     color: #333;
     font: 18px/30px tabular-numbers,Georgia;
 }
+.banner-text {
+    position: absolute;
+    bottom: 0;
+    max-width: 400px;
+    margin: 80px;
+}
+.logo-tut {
+    position: absolute;
+    top: 0;
+    max-width: 400px;
+    margin: 80px;
+}
+.main-banner {
+    position: relative;
+}
 @media (min-width:568px) {
     .section.tut-heading {
         padding: 40px;
