@@ -60,14 +60,14 @@
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="art-desc">
-                        <div class="f-ttl">
+                        <div class="f-ttl f-ttl-right">
                             BY THE NUMBERS
                         </div>
                         <div class="ttl-wrap">
-                            <div class="y-ttl">
+                            <div class="y-ttl y-ttl-right">
                                 <span>₹2,800 crore+</span>
                             </div>
-                            <div class="th-ttl">
+                            <div class="th-ttl th-ttl-right">
                                 FUNDS RAISED BY THE CLASS OF 2022
                             </div>
                         </div>
@@ -127,7 +127,330 @@
 </section>
 <section class="section tut-art-wrap">
     <div class="container">
-
+        <div class="art-box">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="art-desc">
+                        <div class="f-ttl f-ttl-left">
+                            BY THE NUMBERS
+                        </div>
+                        <div class="ttl-wrap">
+                            <div class="y-ttl y-ttl-left">
+                                <span>₹2,800 crore+</span>
+                            </div>
+                            <div class="th-ttl th-ttl-left">
+                                FUNDS RAISED BY THE CLASS OF 2022
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-12">
+                    <div class="art-img">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <span class="art-ttl">
+                                Neetu Yadav, Kirti Jangra, 
+                                <em>Animall</em>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="art-list">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section tut-art-wrap">
+    <div class="container">
+        <div class="art-box">
+            <div class="row">
+                <div class="col-md-8 col-12">
+                    <div class="art-img">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <span class="art-ttl">
+                                Neetu Yadav, Kirti Jangra, 
+                                <em>Animall</em>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="art-desc">
+                        <div class="f-ttl f-ttl-right">
+                            BY THE NUMBERS
+                        </div>
+                        <div class="ttl-wrap">
+                            <div class="y-ttl y-ttl-right">
+                                <span>₹2,800 crore+</span>
+                            </div>
+                            <div class="th-ttl th-ttl-right">
+                                FUNDS RAISED BY THE CLASS OF 2022
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="art-list">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section tut-art-wrap">
+    <div class="container">
+        <div class="art-box">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="art-desc">
+                        <div class="f-ttl f-ttl-left">
+                            BY THE NUMBERS
+                        </div>
+                        <div class="ttl-wrap">
+                            <div class="y-ttl y-ttl-left">
+                                <span>₹2,800 crore+</span>
+                            </div>
+                            <div class="th-ttl th-ttl-left">
+                                FUNDS RAISED BY THE CLASS OF 2022
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-12">
+                    <div class="art-img">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <span class="art-ttl">
+                                Neetu Yadav, Kirti Jangra, 
+                                <em>Animall</em>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="art-list">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section tut-art-wrap">
+    <div class="container">
+        <div class="art-box">
+            <div class="row">
+                <div class="col-md-8 col-12">
+                    <div class="art-img">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <span class="art-ttl">
+                                Neetu Yadav, Kirti Jangra, 
+                                <em>Animall</em>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="art-desc">
+                        <div class="f-ttl f-ttl-right">
+                            BY THE NUMBERS
+                        </div>
+                        <div class="ttl-wrap">
+                            <div class="y-ttl y-ttl-right">
+                                <span>₹2,800 crore+</span>
+                            </div>
+                            <div class="th-ttl th-ttl-right">
+                                FUNDS RAISED BY THE CLASS OF 2022
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="art-list">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
+                        <span class="ttl-name">
+                            Rahul Jain, 
+                            <em class="comp-name">
+                                Sideways Consulting
+                            </em>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 @include('modal.profile')

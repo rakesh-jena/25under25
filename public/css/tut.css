@@ -43,15 +43,21 @@ a {
     padding-top: 5px;
     font-family: sans-serif;
 }
-.f-ttl {
+.f-ttl, .f-ttl-left {
     color: #fff;
     text-transform: uppercase;
     display: flex;
-    text-align: right;
     position: relative;
     margin-bottom: 12px;
-    margin-left: auto;
     width: 30%;
+}
+.f-ttl-right {
+    margin-left: auto;
+    text-align: right;
+}
+.f-ttl-left{
+    margin-right: auto;
+    text-align: left;
 }
 .f-ttl::after {
     height: 2px;
@@ -60,7 +66,12 @@ a {
     background: #fff;
     position: absolute;
     bottom: -5px;
+}
+.f-ttl.f-ttl-right::after {
     right: 0;
+}
+.f-ttl.f-ttl-left::after {
+    left: 0;
 }
 .ttl-wrap {
     display: flex;
@@ -70,8 +81,19 @@ a {
     font-size: 50px;
     font-weight: 400;
     font-family: 'Nagoda', sans-serif;
-    color: #ff9933;
     display: flex;
+}
+.y-ttl-left {
+    margin-right: auto;
+    align-items: flex-start;
+}
+.y-ttl-right span {
+    color: #ff9933;
+}
+.y-ttl-left span {
+    color: #ff0066;
+}
+.y-ttl-right {
     margin-left: auto;
     align-items: flex-end;
 }
@@ -82,9 +104,15 @@ a {
     margin-bottom: 48px;
     width: 50%;
     display: flex;
-    margin-left: auto;
-    position: relative;
+    position: relative;    
+}
+.th-ttl-left {
+    text-align: left;
+    margin-right: auto;
+}
+.th-ttl-right {
     text-align: right;
+    margin-left: auto;
 }
 .th-ttl::after {
     height: 2px;
@@ -93,7 +121,12 @@ a {
     background: #fff;
     position: absolute;
     bottom: -25px;
+}
+.th-ttl-right::after {
     right: 0;
+}
+.th-ttl-left::after {
+    left: 0;
 }
 .art-list, .art-box {
     padding: 80px 0 0;
