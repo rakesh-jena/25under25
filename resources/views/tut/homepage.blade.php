@@ -3,6 +3,9 @@
 @section('meta_keywords', 'YIF')
 @section('meta_description', 'News on Indian Youth and Politics')
 
+<?php use App\Http\Controllers\TutController;
+use App\Models\Profile;
+?>
 @section('content')
 <section class="section tut-banner">
     <div class="main-banner">
@@ -28,7 +31,7 @@
     <div class="container">
         <div class="af-title">
             <h1>
-                FORBES INDIA 30 UNDER 30 2022: MEET INDIA'S YOUNG DISRUPTORS AND GAMECHANGERS
+                {{TutController::get_meta('featured_title')}}
             </h1>
         </div>
         <div class="af-content">
@@ -37,12 +40,13 @@
                     <img width="150" src="{{URL::asset('images/25under25/30-under-20-img.png')}}" alt="25">
                 </div>
                 <div class="col-md-10">
-                    <p class="desc">Disrupting an industry is not easy. Neither is making a name for yourself in a dynamic economy like India's. But achieving all that at a young age<span style="font-family:Arial !important;">—</span>under 30<span style="font-family:Arial !important;">—</span>is no mean feat. Our Class of 2022's entrepreneurs, professionals, designers, influencers, and sportspersons, represent the many Indias we live in, and epitomise that success can come from anyone<span style="font-family:Arial !important;">—</span>and anywhere<span style="font-family:Arial !important;">—</span>as long as they are empowered to shine</p>
+                    <p class="desc">{{TutController::get_meta('featured_content')}}</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- Section One -->
 <section class="section tut-art-wrap">
     <div class="container">
         <div class="art-box">
@@ -50,10 +54,11 @@
                 <div class="col-md-8 col-12">
                     <div class="art-img">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <?php $profile = Profile::where('id', TutController::get_meta('banner_one'))->first();?>
+                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
-                                Neetu Yadav, Kirti Jangra, 
-                                <em>Animall</em>
+                                {{$profile->name}}, 
+                                <em>{{$profile->organization}}</em>
                             </span>
                         </a>
                     </div>
@@ -65,10 +70,10 @@
                         </div>
                         <div class="ttl-wrap">
                             <div class="y-ttl y-ttl-right">
-                                <span>₹2,800 crore+</span>
+                                <span>{{TutController::get_meta('title_one')}}</span>
                             </div>
                             <div class="th-ttl th-ttl-right">
-                                FUNDS RAISED BY THE CLASS OF 2022
+                                {{TutController::get_meta('subtitle_one')}}
                             </div>
                         </div>
                     </div>
@@ -77,54 +82,28 @@
         </div>
         <div class="art-list">
             <div class="row">
+                <?php $ids = unserialize(TutController::get_meta('list_one'));?>
+                @foreach($ids as $id)
+                <?php $profile = Profile::where('id', (int)$id)->first();?>
+                
                 <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="" alt="{{$profile->name}}">
                         <span class="ttl-name">
-                            Rahul Jain, 
+                            {{$profile->name}}, 
                             <em class="comp-name">
-                                Sideways Consulting
+                                {{$profile->organization}}
                             </em>
                         </span>
                     </a>
                 </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </section>
+
+<!-- Section Two -->
 <section class="section tut-art-wrap">
     <div class="container">
         <div class="art-box">
@@ -136,21 +115,22 @@
                         </div>
                         <div class="ttl-wrap">
                             <div class="y-ttl y-ttl-left">
-                                <span>₹2,800 crore+</span>
+                                <span>{{TutController::get_meta('title_two')}}</span>
                             </div>
                             <div class="th-ttl th-ttl-left">
-                                FUNDS RAISED BY THE CLASS OF 2022
+                                {{TutController::get_meta('subtitle_two')}}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-8 col-12">
                     <div class="art-img">
+                        <?php $profile = Profile::where('id', TutController::get_meta('banner_two'))->first();?>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
-                                Neetu Yadav, Kirti Jangra, 
-                                <em>Animall</em>
+                                {{$profile->name}}, 
+                                <em>{{$profile->organization}}</em>
                             </span>
                         </a>
                     </div>
@@ -159,65 +139,40 @@
         </div>
         <div class="art-list">
             <div class="row">
+                <?php $ids = unserialize(TutController::get_meta('list_two'));?>
+                @foreach($ids as $id)
+                <?php $profile = Profile::where('id', (int)$id)->first();?>
+                
                 <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="" alt="{{$profile->name}}">
                         <span class="ttl-name">
-                            Rahul Jain, 
+                            {{$profile->name}}, 
                             <em class="comp-name">
-                                Sideways Consulting
+                                {{$profile->organization}}
                             </em>
                         </span>
                     </a>
                 </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </section>
+
+<!-- Section Three -->
 <section class="section tut-art-wrap">
     <div class="container">
         <div class="art-box">
             <div class="row">
                 <div class="col-md-8 col-12">
                     <div class="art-img">
+                        <?php $profile = Profile::where('id', TutController::get_meta('banner_three'))->first();?>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
-                                Neetu Yadav, Kirti Jangra, 
-                                <em>Animall</em>
+                                {{$profile->name}}, 
+                                <em>{{$profile->organization}}</em>
                             </span>
                         </a>
                     </div>
@@ -229,10 +184,10 @@
                         </div>
                         <div class="ttl-wrap">
                             <div class="y-ttl y-ttl-right">
-                                <span>₹2,800 crore+</span>
+                                <span>{{TutController::get_meta('title_three')}}</span>
                             </div>
                             <div class="th-ttl th-ttl-right">
-                                FUNDS RAISED BY THE CLASS OF 2022
+                                {{TutController::get_meta('subtitle_three')}}
                             </div>
                         </div>
                     </div>
@@ -241,54 +196,28 @@
         </div>
         <div class="art-list">
             <div class="row">
+                <?php $ids = unserialize(TutController::get_meta('list_three'));?>
+                @foreach($ids as $id)
+                <?php $profile = Profile::where('id', (int)$id)->first();?>
+                
                 <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="" alt="{{$profile->name}}">
                         <span class="ttl-name">
-                            Rahul Jain, 
+                            {{$profile->name}}, 
                             <em class="comp-name">
-                                Sideways Consulting
+                                {{$profile->organization}}
                             </em>
                         </span>
                     </a>
                 </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </section>
+
+<!-- Section Four -->
 <section class="section tut-art-wrap">
     <div class="container">
         <div class="art-box">
@@ -300,21 +229,22 @@
                         </div>
                         <div class="ttl-wrap">
                             <div class="y-ttl y-ttl-left">
-                                <span>₹2,800 crore+</span>
+                                <span>{{TutController::get_meta('title_four')}}</span>
                             </div>
                             <div class="th-ttl th-ttl-left">
-                                FUNDS RAISED BY THE CLASS OF 2022
+                                {{TutController::get_meta('subtitle_four')}}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-8 col-12">
                     <div class="art-img">
+                        <?php $profile = Profile::where('id', TutController::get_meta('banner_four'))->first();?>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
-                                Neetu Yadav, Kirti Jangra, 
-                                <em>Animall</em>
+                                {{$profile->name}}, 
+                                <em>{{$profile->organization}}</em>
                             </span>
                         </a>
                     </div>
@@ -323,65 +253,40 @@
         </div>
         <div class="art-list">
             <div class="row">
+                <?php $ids = unserialize(TutController::get_meta('list_four'));?>
+                @foreach($ids as $id)
+                <?php $profile = Profile::where('id', (int)$id)->first();?>
+                
                 <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="" alt="{{$profile->name}}">
                         <span class="ttl-name">
-                            Rahul Jain, 
+                            {{$profile->name}}, 
                             <em class="comp-name">
-                                Sideways Consulting
+                                {{$profile->organization}}
                             </em>
                         </span>
                     </a>
                 </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </section>
+
+<!-- Section Five -->
 <section class="section tut-art-wrap">
     <div class="container">
         <div class="art-box">
             <div class="row">
                 <div class="col-md-8 col-12">
                     <div class="art-img">
+                        <?php $profile = Profile::where('id', TutController::get_meta('banner_five'))->first();?>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="{{URL::asset('images/25under25/Neetu-Kirti.jpg')}}" alt="Neetu Kirti">
+                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
-                                Neetu Yadav, Kirti Jangra, 
-                                <em>Animall</em>
+                                {{$profile->name}}, 
+                                <em>{{$profile->organization}}</em>
                             </span>
                         </a>
                     </div>
@@ -393,10 +298,10 @@
                         </div>
                         <div class="ttl-wrap">
                             <div class="y-ttl y-ttl-right">
-                                <span>₹2,800 crore+</span>
+                                <span>{{TutController::get_meta('title_five')}}</span>
                             </div>
                             <div class="th-ttl th-ttl-right">
-                                FUNDS RAISED BY THE CLASS OF 2022
+                                {{TutController::get_meta('subtitle_five')}}
                             </div>
                         </div>
                     </div>
@@ -405,50 +310,22 @@
         </div>
         <div class="art-list">
             <div class="row">
+                <?php $ids = unserialize(TutController::get_meta('list_five'));?>
+                @foreach($ids as $id)
+                <?php $profile = Profile::where('id', (int)$id)->first();?>
+                
                 <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Gokul.jpg')}}" alt="Rahul Jain">
+                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="" alt="{{$profile->name}}">
                         <span class="ttl-name">
-                            Rahul Jain, 
+                            {{$profile->name}}, 
                             <em class="comp-name">
-                                Sideways Consulting
+                                {{$profile->organization}}
                             </em>
                         </span>
                     </a>
                 </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-RahulJain.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Rajan.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-3 col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <img src="{{URL::asset('images/25under25/V-Viraj.jpg')}}" alt="Rahul Jain">
-                        <span class="ttl-name">
-                            Rahul Jain, 
-                            <em class="comp-name">
-                                Sideways Consulting
-                            </em>
-                        </span>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

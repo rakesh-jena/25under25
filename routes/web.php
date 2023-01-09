@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('tut.homepage');
 });
-Route::get('/profile', function() {
-    return view('tut.profile');
-});
+Route::get('/profile/{slug}', [ProfileController::class, 'show']);

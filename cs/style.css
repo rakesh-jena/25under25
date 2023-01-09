@@ -30,6 +30,24 @@ img {
     font-weight: 700;
     font-size: 5rem;
 }
+.btn-register {
+    z-index: 200;
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+}
+.form-header {
+    height: 180px;
+    background-image: url(form-header.png);
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: cover;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.form-info, .form-content {
+    padding: 10px 20px;
+}
 @media (max-width: 767.98px) {
     .lp__desktop {
         display: none;
