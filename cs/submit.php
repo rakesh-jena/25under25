@@ -16,14 +16,14 @@ $sql = "insert into `tut_registers`(`name`, `email`, `age`, `mobile`, `organizat
 $to = "somebody@example.com, somebodyelse@example.com";
 $subject = "25 Under 25";
 
-$message = `
+$message = '
 <html>
 <head>
 <title>25 Under 25</title>
 </head>
 <body>
-<p>Hello `.$_POST['name'].`!</p>
-<p>Thank you for registering for Young India Foundation's National Youth Day Celebrations. Join us and our exceptional 25 Under 25 honorees as we recognize their exceptional skill, work and contribution to India's nation building.</p>
+<p>Hello '.$_POST["name"].'!</p>
+<p>Thank you for registering for Young India Foundation\'s National Youth Day Celebrations. Join us and our exceptional 25 Under 25 honorees as we recognize their exceptional skill, work and contribution to India\'s nation building.</p>
 <p>We hope to see you at <a href="https://goo.gl/maps/x6G8VPP5PTN5xs7YA" target="_blank">India International Centre</a> starting 6 p.m. onwards.</p>
 <br>
 <p>Excited to meet you,</p>
@@ -31,7 +31,7 @@ $message = `
 <p>Young India Foundation</p>
 </body>
 </html>
-`;
+';
 
 // Always set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";
