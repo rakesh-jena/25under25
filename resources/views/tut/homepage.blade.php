@@ -56,7 +56,7 @@ use App\Models\Profile;
                     <div class="art-img">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
                             <?php $profile = Profile::where('id', TutController::get_meta('banner_one'))->first();?>
-                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
+                            <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
                                 {{$profile->name}}, 
                                 <em>{{$profile->organization}}</em>
@@ -90,8 +90,8 @@ use App\Models\Profile;
                 <?php $profile = Profile::where('id', (int)$id)->first();?>
                 
                 <div class="col-md-3 col-6">
-                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
-                        <img src="" alt="{{$profile->name}}">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_profile}}" alt="{{$profile->name}}">
                         <span class="ttl-name">
                             {{$profile->name}}, 
                             <em class="comp-name">
@@ -132,7 +132,7 @@ use App\Models\Profile;
                     <div class="art-img">
                         <?php $profile = Profile::where('id', TutController::get_meta('banner_two'))->first();?>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
+                            <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
                                 {{$profile->name}}, 
                                 <em>{{$profile->organization}}</em>
@@ -152,7 +152,7 @@ use App\Models\Profile;
                 
                 <div class="col-md-3 col-6">
                     <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
-                        <img src="" alt="{{$profile->name}}">
+                        <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_profile}}" alt="{{$profile->name}}">
                         <span class="ttl-name">
                             {{$profile->name}}, 
                             <em class="comp-name">
@@ -178,7 +178,7 @@ use App\Models\Profile;
                     <div class="art-img">
                         <?php $profile = Profile::where('id', TutController::get_meta('banner_three'))->first();?>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
+                            <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
                                 {{$profile->name}}, 
                                 <em>{{$profile->organization}}</em>
@@ -212,8 +212,8 @@ use App\Models\Profile;
                 <?php $profile = Profile::where('id', (int)$id)->first();?>
                 
                 <div class="col-md-3 col-6">
-                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
-                        <img src="" alt="{{$profile->name}}">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_profile}}" alt="{{$profile->name}}">
                         <span class="ttl-name">
                             {{$profile->name}}, 
                             <em class="comp-name">
@@ -254,7 +254,7 @@ use App\Models\Profile;
                     <div class="art-img">
                         <?php $profile = Profile::where('id', TutController::get_meta('banner_four'))->first();?>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
+                            <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
                                 {{$profile->name}}, 
                                 <em>{{$profile->organization}}</em>
@@ -273,8 +273,8 @@ use App\Models\Profile;
                 <?php $profile = Profile::where('id', (int)$id)->first();?>
                 
                 <div class="col-md-3 col-6">
-                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
-                        <img src="" alt="{{$profile->name}}">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_profile}}" alt="{{$profile->name}}">
                         <span class="ttl-name">
                             {{$profile->name}}, 
                             <em class="comp-name">
@@ -300,7 +300,7 @@ use App\Models\Profile;
                     <div class="art-img">
                         <?php $profile = Profile::where('id', TutController::get_meta('banner_five'))->first();?>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
-                            <img src="https://news.youngindia.foundation/images/{{$profile->image_banner}}" alt="{{$profile->name}}">
+                            <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_banner}}" alt="{{$profile->name}}">
                             <span class="art-ttl">
                                 {{$profile->name}}, 
                                 <em>{{$profile->organization}}</em>
@@ -334,8 +334,8 @@ use App\Models\Profile;
                 <?php $profile = Profile::where('id', (int)$id)->first();?>
                 
                 <div class="col-md-3 col-6">
-                    <a href="{{url('profile/'.$profile->slug)}}" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
-                        <img src="" alt="{{$profile->name}}">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="{{$profile->id}}">
+                        <img src="https://news.youngindia.foundation/images/tut/{{$profile->image_profile}}" alt="{{$profile->name}}">
                         <span class="ttl-name">
                             {{$profile->name}}, 
                             <em class="comp-name">
