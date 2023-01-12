@@ -49,6 +49,7 @@ use App\Models\Profile;
 <!-- Section One -->
 <section class="section tut-art-wrap">
     <div class="container">
+        @if(TutController::get_meta('banner_one'))
         <div class="art-box">
             <div class="row">
                 <div class="col-md-8 col-12">
@@ -80,6 +81,8 @@ use App\Models\Profile;
                 </div>
             </div>
         </div>
+        @endif
+        @if(TutController::get_meta('list_one'))
         <div class="art-list">
             <div class="row">
                 <?php $ids = unserialize(TutController::get_meta('list_one'));?>
@@ -100,12 +103,14 @@ use App\Models\Profile;
                 @endforeach
             </div>
         </div>
+        @endif
     </div>
 </section>
 
 <!-- Section Two -->
 <section class="section tut-art-wrap">
     <div class="container">
+        @if(TutController::get_meta('banner_two'))
         <div class="art-box">
             <div class="row">
                 <div class="col-md-4 col-12">
@@ -137,6 +142,8 @@ use App\Models\Profile;
                 </div>
             </div>
         </div>
+        @endif
+        @if(TutController::get_meta('list_two'))
         <div class="art-list">
             <div class="row">
                 <?php $ids = unserialize(TutController::get_meta('list_two'));?>
@@ -157,12 +164,14 @@ use App\Models\Profile;
                 @endforeach
             </div>
         </div>
+        @endif
     </div>
 </section>
 
 <!-- Section Three -->
 <section class="section tut-art-wrap">
     <div class="container">
+        @if(TutController::get_meta('banner_three'))
         <div class="art-box">
             <div class="row">
                 <div class="col-md-8 col-12">
@@ -194,6 +203,8 @@ use App\Models\Profile;
                 </div>
             </div>
         </div>
+        @endif
+        @if(TutController::get_meta('list_three'))
         <div class="art-list">
             <div class="row">
                 <?php $ids = unserialize(TutController::get_meta('list_three'));?>
@@ -214,12 +225,14 @@ use App\Models\Profile;
                 @endforeach
             </div>
         </div>
+        @endif
     </div>
 </section>
 
 <!-- Section Four -->
 <section class="section tut-art-wrap">
     <div class="container">
+        @if(TutController::get_meta('banner_four'))
         <div class="art-box">
             <div class="row">
                 <div class="col-md-4 col-12">
@@ -251,6 +264,8 @@ use App\Models\Profile;
                 </div>
             </div>
         </div>
+        @endif
+        @if(TutController::get_meta('list_four'))
         <div class="art-list">
             <div class="row">
                 <?php $ids = unserialize(TutController::get_meta('list_four'));?>
@@ -271,12 +286,14 @@ use App\Models\Profile;
                 @endforeach
             </div>
         </div>
+        @endif
     </div>
 </section>
 
 <!-- Section Five -->
 <section class="section tut-art-wrap">
     <div class="container">
+        @if(TutController::get_meta('banner_five'))
         <div class="art-box">
             <div class="row">
                 <div class="col-md-8 col-12">
@@ -308,6 +325,8 @@ use App\Models\Profile;
                 </div>
             </div>
         </div>
+        @endif
+        @if(TutController::get_meta('list_five'))
         <div class="art-list">
             <div class="row">
                 <?php $ids = unserialize(TutController::get_meta('list_five'));?>
@@ -328,6 +347,7 @@ use App\Models\Profile;
                 @endforeach
             </div>
         </div>
+        @endif
     </div>
 </section>
 @include('modal.profile')
